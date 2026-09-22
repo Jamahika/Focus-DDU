@@ -331,7 +331,7 @@
       </div>
     </div>
 
-    <!-- Header Navigation -->
+    <!-- Header Navigation (Clean & Streamlined for Mobile) -->
     <header
       class="bg-slate-900/95 backdrop-blur-md border-b border-slate-800 sticky top-0 z-40"
     >
@@ -368,21 +368,20 @@
           </div>
         </div>
 
-        <div class="flex items-center space-x-1.5 sm:space-x-3 flex-shrink-0">
-          <!-- Client Action Buttons (Hidden when in Admin view) -->
+        <div class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+          <!-- Client Action Buttons (Your Giving & Account) -->
           <div
             id="clientPortalHeaderControls"
-            class="flex items-center space-x-1.5 sm:space-x-3"
+            class="flex items-center space-x-2 sm:space-x-3"
           >
             <div id="clientPortalNavContainer">
               <button
                 type="button"
                 onclick="handlePortalClick()"
-                class="px-2.5 sm:px-3.5 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-sm font-bold bg-violet-600/20 hover:bg-violet-600/30 text-violet-300 border border-violet-500/40 transition-all flex items-center space-x-1.5"
+                class="px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-violet-600/20 hover:bg-violet-600/30 text-violet-300 border border-violet-500/40 transition-all flex items-center space-x-1.5"
               >
                 <i class="fa-solid fa-hand-holding-heart"></i>
-                <span class="hidden md:inline">Your Giving</span>
-                <span class="inline md:hidden">Giving</span>
+                <span>Your Giving</span>
               </button>
             </div>
 
@@ -390,31 +389,32 @@
               <button
                 type="button"
                 onclick="openAuthModal('login')"
-                class="px-2.5 sm:px-3.5 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-sm font-bold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all flex items-center space-x-1.5"
+                class="px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all flex items-center space-x-1.5"
               >
                 <i class="fa-solid fa-user-circle"></i>
-                <span class="hidden md:inline">Account</span>
+                <span>Account</span>
               </button>
             </div>
           </div>
 
+          <!-- Admin Nav Button (Hidden on Mobile screens, available in Footer instead) -->
           <nav
-            class="flex items-center space-x-1 bg-slate-800/60 p-1 rounded-xl sm:rounded-2xl border border-slate-700/50"
+            class="hidden lg:flex items-center space-x-1 bg-slate-800/60 p-1.5 rounded-2xl border border-slate-700/50"
           >
             <button
               type="button"
               onclick="switchTab('client')"
               id="nav-client"
-              class="px-2.5 sm:px-4 py-1.5 sm:py-2.5 rounded-lg sm:rounded-xl text-[11px] sm:text-sm font-semibold transition-all bg-indigo-600 text-white shadow-md shadow-indigo-600/30 flex items-center space-x-1"
+              class="px-4 py-2.5 rounded-xl text-sm font-semibold transition-all bg-indigo-600 text-white shadow-md shadow-indigo-600/30 flex items-center space-x-2"
             >
               <i class="fa-solid fa-user-pen"></i>
-              <span>Register</span>
+              <span>Registration</span>
             </button>
             <button
               type="button"
               onclick="handleAdminNavClick()"
               id="nav-admin"
-              class="px-2.5 sm:px-4 py-1.5 sm:py-2.5 rounded-lg sm:rounded-xl text-[11px] sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-slate-800 flex items-center space-x-1"
+              class="px-4 py-2.5 rounded-xl text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-slate-800 flex items-center space-x-2"
             >
               <i class="fa-solid fa-chart-pie"></i>
               <span>Admin</span>
@@ -1165,7 +1165,6 @@
               >0 Records</span
             >
           </div>
-          <!-- Mobile Scrollable Table Wrapper with Touch Shadow Hint -->
           <div class="overflow-x-auto w-full -webkit-overflow-scrolling-touch">
             <table class="w-full text-left border-collapse min-w-[700px]">
               <thead>
@@ -1238,13 +1237,26 @@
           </div>
 
           <!-- Payment Accounts Widget in Footer -->
-          <div class="lg:col-span-3">
-            <h4
-              class="text-white font-bold text-xs mb-4 tracking-wider uppercase flex items-center"
-            >
-              <i class="fa-solid fa-building-columns mr-2 text-indigo-400"></i>
-              Account keenya "Head office" biratti beekamti qabu dha.
-            </h4>
+          <div class="lg:col-span-3 space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <h4
+                class="text-white font-bold text-xs tracking-wider uppercase flex items-center"
+              >
+                <i class="fa-solid fa-building-columns mr-2 text-indigo-400"></i>
+                Account keenya "Head office" biratti beekamti qabu dha.
+              </h4>
+              <!-- ADMIN BUTTON PLACED DISCREETLY IN FOOTER FOR ALL PHONES / USERS -->
+              <button
+                type="button"
+                onclick="handleAdminNavClick()"
+                id="footerAdminBtn"
+                class="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-indigo-400 hover:text-indigo-300 border border-slate-800 rounded-xl text-xs font-bold transition-all flex items-center justify-center space-x-2 self-start sm:self-auto"
+              >
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Admin Control Panel</span>
+              </button>
+            </div>
+
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <!-- Telebirr -->
               <div
