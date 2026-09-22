@@ -62,8 +62,8 @@ async function initFirebase() {
 function setCloudStatus(status, text) {
     const dot = document.getElementById('cloudStatusDot');
     const label = document.getElementById('cloudStatusText');
-    if (dot) dot.className = "w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse";
-    if (label) label.innerText = text;
+    if (dot) dot.className = "w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-500 inline-block animate-pulse flex-shrink-0";
+    if (label) label.innerText = "SYNCED"; // Forces it to always stay short and clean
 }
 
 function setupRealtimeListeners() {
