@@ -59,54 +59,7 @@
       </div>
     </div>
 
-    <!-- Registration Success Welcome Modal -->
-    <div
-      id="welcomeSuccessModal"
-      class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 hidden animate-fadeIn"
-    >
-      <div
-        class="bg-gradient-to-b from-indigo-950 via-slate-900 to-slate-900 border border-indigo-500/40 rounded-3xl p-6 sm:p-10 max-w-md sm:max-w-lg w-full shadow-2xl text-center space-y-5 sm:space-y-6 relative overflow-hidden mx-4"
-      >
-        <div
-          class="absolute -right-16 -top-16 w-48 h-48 bg-indigo-600/20 rounded-full blur-2xl pointer-events-none"
-        ></div>
-        <div
-          class="w-16 h-16 rounded-3xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto text-2xl shadow-lg"
-        >
-          <i class="fa-solid fa-hands-praying"></i>
-        </div>
-        <div class="space-y-2">
-          <span
-            class="text-xs font-bold uppercase tracking-widest text-indigo-400"
-            >Galmeen Milkaa'eera!</span
-          >
-          <h3
-            id="welcomeModalTitle"
-            class="text-xl sm:text-3xl font-extrabold text-white"
-          >
-            Baga Nagaan Dhuftan!
-          </h3>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Galma'uun keessan Wangeela Gooftaa keenya Yesuusi Kiristoosiif
-            baay'ee murteessaadha. Focus DDU Fellowship wajjin ta'uun hojiif
-            kaayyoo Waaqayyoo galmaan gahuuf waan murteessitaniif Galatoomaa!
-          </p>
-        </div>
-        <div
-          class="p-3.5 sm:p-4 bg-slate-950/60 border border-slate-800 rounded-2xl text-[11px] sm:text-xs text-slate-400 font-medium"
-        >
-          "Ati yommuu isaaf kennitu gammachuudhaan isaaf kenni malee garaan kee
-          hin micicin!" (Kes. 15:10)
-        </div>
-        <button
-          type="button"
-          onclick="closeWelcomeModal()"
-          class="w-full py-3.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-2xl text-xs sm:text-sm font-bold shadow-lg shadow-indigo-600/30 transition-all"
-        >
-          Gara Fuula Hojii Deebi'aa
-        </button>
-      </div>
-    </div>
+   
 
     <!-- Admin Login Modal -->
     <div
@@ -1328,15 +1281,7 @@
             </div>
           </div>
         </div>
-
-        <div
-          class="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4 text-center sm:text-left border-t border-slate-900"
-        >
-          <p>
-            &copy; 2026 Focus DDU Fellowship. All rights reserved.
-          </p>
-          
-          <button
+ <button
             type="button"
             onclick="handleAdminNavClick()"
             class="text-slate-400 hover:text-indigo-400 font-bold transition-all flex items-center space-x-1.5"
@@ -1344,7 +1289,12 @@
             <i class="fa-solid fa-fingerprint text-indigo-400"></i>
             <span>Admin Control Panel</span>
           </button>
-
+        <div
+          class="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4 text-center sm:text-left border-t border-slate-900"
+        >
+          <p>
+            &copy; 2026 Focus DDU Fellowship. All rights reserved.
+          </p>
           <p>Encrypted Cloud Database Sync Active</p>
         </div>
       </div>
